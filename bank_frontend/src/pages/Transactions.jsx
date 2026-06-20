@@ -11,7 +11,7 @@ import {
   Pagination,
   InputGroup
 } from 'react-bootstrap';
-import { biSearch, biFilter, biDownload } from 'react-bootstrap-icons';
+import { Search, Filter, Download } from 'react-bootstrap-icons';
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
@@ -95,7 +95,7 @@ const Transactions = () => {
           <p className="text-muted">View all your transaction history</p>
         </div>
         <button className="btn btn-outline-primary">
-          <i className="bi bi-download me-2"></i>
+          <Download className="me-2" />
           Export
         </button>
       </div>
@@ -106,7 +106,7 @@ const Transactions = () => {
             <Col md={5}>
               <InputGroup>
                 <span className="input-group-text bg-light">
-                  <i className="bi bi-search"></i>
+                  <Search />
                 </span>
                 <Form.Control
                   type="text"

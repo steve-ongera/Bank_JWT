@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { userService } from '../services/api';
 import { Card, Form, Button, Alert, Row, Col, Spinner } from 'react-bootstrap';
-import { biCreditCard, biWallet2, biArrowUpCircle } from 'react-bootstrap-icons';
+import { CreditCard, Wallet2, ArrowUpCircle } from 'react-bootstrap-icons';
 
 const Deposit = () => {
   const { user, deposit } = useAuth();
@@ -50,7 +50,7 @@ const Deposit = () => {
           <p className="text-muted">Add money to your account</p>
         </div>
         <div className="d-flex align-items-center">
-          <i className="bi bi-wallet2 text-primary me-2"></i>
+          <Wallet2 className="text-primary me-2" />
           <span className="fw-bold">Balance: ${parseFloat(user?.balance || 0).toFixed(2)}</span>
         </div>
       </div>
@@ -135,7 +135,7 @@ const Deposit = () => {
                     </>
                   ) : (
                     <>
-                      <i className="bi bi-arrow-up-circle me-2"></i>
+                      <ArrowUpCircle className="me-2" />
                       Deposit ${parseFloat(amount || 0).toFixed(2) || '0.00'}
                     </>
                   )}

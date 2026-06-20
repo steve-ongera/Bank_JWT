@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name = 'core'
+app_name = 'bank_Jwt'
 
 urlpatterns = [
     path('auth/register/', views.register, name='register'),

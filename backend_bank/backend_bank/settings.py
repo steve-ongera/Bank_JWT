@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'corsheaders',
     
     # Local apps
-    'bank_jwt',
+    'bank_Jwt',
 ]
 
 MIDDLEWARE = [
@@ -141,4 +141,4 @@ SIMPLE_JWT = {
     'JTI_CLAIM': 'jti',
 }
 
-AUTH_USER_MODEL = 'bank_jwt.User'
+AUTH_USER_MODEL = 'bank_Jwt.User'

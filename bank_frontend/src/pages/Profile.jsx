@@ -12,12 +12,12 @@ import {
   Image
 } from 'react-bootstrap';
 import { 
-  biPerson, 
-  biEnvelope, 
-  biWallet2, 
-  biCalendar, 
-  biPencil,
-  biCheckCircle
+  Person, 
+  Envelope, 
+  Wallet2, 
+  Calendar, 
+  Pencil,
+  CheckCircle
 } from 'react-bootstrap-icons';
 
 const Profile = () => {
@@ -80,7 +80,7 @@ const Profile = () => {
             variant="outline-primary"
             onClick={() => setIsEditing(true)}
           >
-            <i className="bi bi-pencil me-2"></i>
+            <Pencil className="me-2" />
             Edit Profile
           </Button>
         )}
@@ -93,7 +93,7 @@ const Profile = () => {
               <div className="profile-avatar mx-auto mb-3">
                 <div className="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
                      style={{ width: '120px', height: '120px', margin: '0 auto' }}>
-                  <i className="bi bi-person fs-1"></i>
+                  <Person className="fs-1" />
                 </div>
               </div>
               <h4 className="fw-bold">{user?.name}</h4>
@@ -116,7 +116,7 @@ const Profile = () => {
                 <Form onSubmit={handleSubmit}>
                   <Form.Group className="mb-3">
                     <Form.Label className="fw-bold">
-                      <i className="bi bi-person me-2"></i>
+                      <Person className="me-2" />
                       Full Name
                     </Form.Label>
                     <Form.Control
@@ -130,7 +130,7 @@ const Profile = () => {
 
                   <Form.Group className="mb-3">
                     <Form.Label className="fw-bold">
-                      <i className="bi bi-envelope me-2"></i>
+                      <Envelope className="me-2" />
                       Email Address
                     </Form.Label>
                     <Form.Control
@@ -151,7 +151,7 @@ const Profile = () => {
                         </>
                       ) : (
                         <>
-                          <i className="bi bi-check-circle me-2"></i>
+                          <CheckCircle className="me-2" />
                           Save Changes
                         </>
                       )}

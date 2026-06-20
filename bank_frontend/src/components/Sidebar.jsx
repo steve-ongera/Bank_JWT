@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 import { 
-  biGrid1x2Fill, 
-  biWallet2, 
-  biArrowUpCircle, 
-  biArrowDownCircle, 
-  biClockHistory, 
-  biPersonCircle,
-  biBoxArrowRight 
+  Grid1x2Fill, 
+  Wallet2, 
+  ArrowUpCircle, 
+  ArrowDownCircle, 
+  ClockHistory, 
+  PersonCircle,
+  BoxArrowRight 
 } from 'react-bootstrap-icons';
 import { useAuth } from '../context/AuthContext';
 
@@ -15,11 +15,11 @@ const Sidebar = () => {
   const { logout } = useAuth();
 
   const navItems = [
-    { path: '/dashboard', icon: 'bi-grid-1x2-fill', label: 'Dashboard' },
-    { path: '/deposit', icon: 'bi-arrow-up-circle', label: 'Deposit' },
-    { path: '/send-money', icon: 'bi-arrow-down-circle', label: 'Send Money' },
-    { path: '/transactions', icon: 'bi-clock-history', label: 'Transactions' },
-    { path: '/profile', icon: 'bi-person-circle', label: 'Profile' },
+    { path: '/dashboard', icon: Grid1x2Fill, label: 'Dashboard' },
+    { path: '/deposit', icon: ArrowUpCircle, label: 'Deposit' },
+    { path: '/send-money', icon: ArrowDownCircle, label: 'Send Money' },
+    { path: '/transactions', icon: ClockHistory, label: 'Transactions' },
+    { path: '/profile', icon: PersonCircle, label: 'Profile' },
   ];
 
   return (
@@ -39,7 +39,7 @@ const Sidebar = () => {
                   `nav-link sidebar-link ${isActive ? 'active' : ''}`
                 }
               >
-                <i className={`bi ${item.icon} me-3`}></i>
+                <item.icon className="me-3" />
                 <span>{item.label}</span>
               </NavLink>
             </Nav.Item>
@@ -50,7 +50,7 @@ const Sidebar = () => {
               onClick={logout}
               className="sidebar-link text-danger"
             >
-              <i className="bi bi-box-arrow-right me-3"></i>
+              <BoxArrowRight className="me-3" />
               <span>Logout</span>
             </Nav.Link>
           </Nav.Item>

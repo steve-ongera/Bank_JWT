@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Container, Card, Form, Button, Alert, Spinner } from 'react-bootstrap';
-import { biEnvelope, biLock, biPerson } from 'react-bootstrap-icons';
+import { Container, Card, Form, Button, Alert, Spinner, Row, Col } from 'react-bootstrap';
+import { Envelope, Lock } from 'react-bootstrap-icons';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -53,7 +53,7 @@ const Login = () => {
                     <Form.Label>Email Address</Form.Label>
                     <div className="input-group">
                       <span className="input-group-text bg-light">
-                        <i className="bi bi-envelope"></i>
+                        <Envelope />
                       </span>
                       <Form.Control
                         type="email"
@@ -69,7 +69,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <div className="input-group">
                       <span className="input-group-text bg-light">
-                        <i className="bi bi-lock"></i>
+                        <Lock />
                       </span>
                       <Form.Control
                         type="password"

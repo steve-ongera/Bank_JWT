@@ -10,8 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.18.0",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "chart.js": "^4.5.1",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-bootstrap": "^2.10.10",
+    "react-bootstrap-icons": "^1.11.6",
+    "react-chartjs-2": "^5.3.1",
+    "react-currency-input-field": "^4.0.5",
+    "react-dom": "^19.2.7",
+    "react-hook-form": "^7.80.0",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.18.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

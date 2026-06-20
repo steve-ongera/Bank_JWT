@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { userService } from '../services/api';
 import { Card, Form, Button, Alert, Row, Col, Spinner } from 'react-bootstrap';
-import { biPerson, biEnvelope, biCurrencyDollar, biArrowRight } from 'react-bootstrap-icons';
+import { Person, Envelope, CurrencyDollar, ArrowRight } from 'react-bootstrap-icons';
 
 const SendMoney = () => {
   const { user } = useAuth();
@@ -87,7 +88,7 @@ const SendMoney = () => {
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-4">
                   <Form.Label className="fw-bold">
-                    <i className="bi bi-envelope me-2"></i>
+                    <Envelope className="me-2" />
                     Recipient Email
                   </Form.Label>
                   <Form.Control
@@ -103,7 +104,7 @@ const SendMoney = () => {
 
                 <Form.Group className="mb-4">
                   <Form.Label className="fw-bold">
-                    <i className="bi bi-currency-dollar me-2"></i>
+                    <CurrencyDollar className="me-2" />
                     Amount
                   </Form.Label>
                   <div className="input-group input-group-lg">
@@ -149,7 +150,7 @@ const SendMoney = () => {
                     </>
                   ) : (
                     <>
-                      <i className="bi bi-arrow-right-circle me-2"></i>
+                      <ArrowRight className="me-2" />
                       Send Money
                     </>
                   )}

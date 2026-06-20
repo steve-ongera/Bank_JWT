@@ -7,10 +7,10 @@ import {
   Badge 
 } from 'react-bootstrap';
 import { 
-  biBell, 
-  biPersonCircle, 
-  biBoxArrowRight,
-  biWallet2 
+  Bell, 
+  PersonCircle, 
+  BoxArrowRight,
+  Wallet2 
 } from 'react-bootstrap-icons';
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="d-flex align-items-center gap-3">
           {/* Balance Badge */}
           <div className="balance-badge d-none d-md-block">
-            <i className="bi bi-wallet2 me-2"></i>
+            <Wallet2 className="me-2" />
             <span className="fw-bold">
               ${parseFloat(user?.balance || 0).toFixed(2)}
             </span>
@@ -49,7 +49,7 @@ const Navbar = () => {
           {/* Notifications */}
           <Dropdown align="end">
             <Dropdown.Toggle variant="link" className="position-relative p-0" id="notification-dropdown">
-              <i className="bi bi-bell fs-5"></i>
+              <Bell className="fs-5" />
               {notifications > 0 && (
                 <Badge 
                   bg="danger" 
@@ -92,7 +92,7 @@ const Navbar = () => {
               id="user-dropdown"
             >
               <div className="user-avatar">
-                <i className="bi bi-person-circle fs-4"></i>
+                <PersonCircle className="fs-4" />
               </div>
               <span className="d-none d-md-inline fw-medium">
                 {user?.name?.split(' ')[0] || 'User'}
@@ -104,7 +104,7 @@ const Navbar = () => {
                 <small className="text-muted">{user?.email}</small>
               </div>
               <Dropdown.Item href="/profile">
-                <i className="bi bi-person-circle me-2"></i>
+                <PersonCircle className="me-2" />
                 Profile
               </Dropdown.Item>
               <Dropdown.Item href="/dashboard">
@@ -113,7 +113,7 @@ const Navbar = () => {
               </Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item onClick={handleLogout} className="text-danger">
-                <i className="bi bi-box-arrow-right me-2"></i>
+                <BoxArrowRight className="me-2" />
                 Logout
               </Dropdown.Item>
             </Dropdown.Menu>

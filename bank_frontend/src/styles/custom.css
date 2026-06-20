@@ -2,7 +2,7 @@
 :root {
   --sidebar-width: 260px;
   --navbar-height: 70px;
-  --primary-color: #3b82f6;
+  --primary-color: hsl(217, 91%, 60%);
   --success-color: #10b981;
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
